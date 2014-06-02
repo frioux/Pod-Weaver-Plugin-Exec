@@ -1,5 +1,7 @@
 package Pod::Weaver::Plugin::Exec;
 
+# ABSTRACT: include output of commands in your pod
+
 use Moose;
 with 'Pod::Weaver::Role::Dialect';
 
