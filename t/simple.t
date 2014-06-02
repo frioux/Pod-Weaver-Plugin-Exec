@@ -36,9 +36,9 @@ __DATA__
 =head1 Welcome to Pod!
 
 =for exec
-perl -E'say 1'
+perl -E"say 1"
 
 =for exec
-perl -E'say 2'
+perl -E"say 2"
 
 Right??
