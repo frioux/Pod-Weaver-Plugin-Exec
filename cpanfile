@@ -1,4 +1,4 @@
-requires 'perl' => 5.014000;
+requires 'perl' => 5.016000;
 
 requires 'Moose';
 requires 'Pod::Weaver::Role::Dialect';

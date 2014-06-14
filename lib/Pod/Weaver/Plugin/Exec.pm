@@ -76,3 +76,17 @@ In the pod of one of your modules:
 
 This is a L<Pod::Weaver> plugin that will take the output of a command and
 insert it as literal data into the pod.
+
+=head1 PERL SUPPORT POLICY
+
+Because this module is geared towards helping release code, as opposed to
+helping run code, I only aim at supporting the last 3 releases of Perl.  So for
+example, at the time of writing that would be 5.20, 5.18, and 5.16.  As an
+author who is developing against Perl and using this to release modules, you can
+use either L<perlbrew|http://perlbrew.pl/> or
+L<plenv|https://github.com/tokuhirom/plenv> to get a more recent perl to release
+from.
+
+Don't bother sending patches to support older versions; I could probably support
+5.8 if I wanted, but this is more so that I can continue to use new perl
+features.
