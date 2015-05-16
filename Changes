@@ -1,6 +1,7 @@
 Revision history for {{$dist->name}}
 
 {{$NEXT}}
+  - Throw an exception if the program exited non-zero
 
 0.001001  2014-06-02 17:15:33-05:00 America/Chicago
   - Hopefully fix tests on MSWin32

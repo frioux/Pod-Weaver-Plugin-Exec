@@ -15,7 +15,8 @@ package
    use Moose;
    with 'Pod::Elemental::Transformer';
 
-   use Capture::Tiny 'capture_stdout';
+   use Capture::Tiny 'capture';
+   use IPC::System::Simple 'system';
    use Moose::Autobox;
    use namespace::clean;
 
@@ -35,7 +36,17 @@ package
            and $para->children->[0]->isa('Pod::Elemental::Element::Pod5::Data');
 
          chomp(my $command = $para->children->[0]->content);
-         my $out = capture_stdout { system($command) };
+
+         local $@;
+         my ($out, $err, $ok) = capture {
+            eval { system $command; 1 };
+         };
+
+         chomp $out;
+         chomp $err;
+         die "Command '$command' failed\nSTDOUT: $out\nSTDERR: $err\n"
+            unless $ok;
+
          $out = join "\n", map " $_", split /\n/, $out;
 
          my $new_doc =

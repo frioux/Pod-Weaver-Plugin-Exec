@@ -4,6 +4,7 @@ requires 'Moose';
 requires 'Pod::Weaver::Role::Dialect';
 requires 'Pod::Elemental::Transformer';
 requires 'Capture::Tiny';
+requires 'IPC::System::Simple';
 requires 'Moose::Autobox';
 requires 'namespace::clean';
 

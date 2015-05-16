@@ -28,6 +28,8 @@ Right??
 =cut
 POD
 
+note('POD: ' . $doc->as_pod_string);
+
 done_testing;
 
 __DATA__
